@@ -18,3 +18,12 @@
     75% { top: 40vh; left: 40vw; }
     100% { top: 0; left: 0; }
 }
+
+h1 {
+    color: #FF2020;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url('https://t3.ftcdn.net/jpg/03/08/60/88/360_F_308608803_h7uIbcaeKXhvLBd36Nk8JfwKJX7nbSR8.jpg');
+}
