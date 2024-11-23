@@ -1,0 +1,20 @@
+.slide-text {
+    position: absolute;
+    top: 50%;
+    left: -100%; 
+    white-space: nowrap;
+    animation: slideText 5s linear infinite;
+}
+
+@keyframes slideText {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+
+@keyframes move {
+    0% { top: 0; left: 0; }
+    25% { top: -40vh; left: -40vw; }
+    50% { top: 40vh; left: -40vw; }
+    75% { top: 40vh; left: 40vw; }
+    100% { top: 0; left: 0; }
+}
