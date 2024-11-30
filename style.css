@@ -20,7 +20,6 @@
     color: #fff;
     text-decoration: none;
     padding: 0.5rem 1rem;
-    font-size: 1.2rem;
 }
 
 .navbar-link:hover {
@@ -33,47 +32,19 @@
 
 /*Main Content*/
 
-.slide-text {
-    position: absolute;
-    top: 50%;
-    left: -100%; 
-    white-space: nowrap;
-    animation: slideText 2s linear infinite;
-}
-
-.slide-text-2 {
-    position: absolute;
-    top: 60%;
-    left: 100%; 
-    white-space: nowrap;
-    animation: slideText 5s linear infinite;
-}
-
-@keyframes slideText {
-    0% { left: -100%; }
-    100% { left: 100%; }
-}
-
-@keyframes move {
-    0% { top: 0; left: 0; }
-    25% { top: -40vh; left: -40vw; }
-    50% { top: 40vh; left: -40vw; }
-    75% { top: 40vh; left: 40vw; }
-    100% { top: 0; left: 0; }
-}
-
-.circle {
+.planets {
     height: 30px;
     width: 30px;
     background-color: #bbb;
     border-radius: 50%;
     display: inline-block;
+    text-align: center;
 }
 
-.circle:hover {
-    height: 50px;
-    width: 50px;
-    background-color: #bbb;
+.planets:hover {
+    height: 70px;
+    width: 70px;
+    background-color: #dfebaf;
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.5s;
@@ -82,5 +53,21 @@
 .img-header {
     height: auto;
     max-width: 100%;
+}
+
+.main {
+    animation-name: spin;
+    animation-duration: 4000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
