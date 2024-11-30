@@ -37,6 +37,19 @@
     100% { top: 0; left: 0; }
 }
 
-h1 {
-    color: #FF2020;
+.circle {
+    height: 30px;
+    width: 30px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: center;
+}
+
+.circle:hover {
+    height: 50px;
+    width: 50px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: center;
+    transition: background-color 0.5s;
 }
