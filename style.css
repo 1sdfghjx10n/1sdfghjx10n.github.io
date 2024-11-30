@@ -53,3 +53,7 @@
     display: center;
     transition: background-color 0.5s;
 }
+
+.image-header {
+    opacity: 0.8;
+}
