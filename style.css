@@ -1,3 +1,13 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #4c4747b4;
+    color: #fff;
+    position: sticky;
+}
+
 .slide-text {
     position: absolute;
     top: 50%;
@@ -29,8 +39,4 @@
 
 h1 {
     color: #FF2020;
-}
-
-.first-section {
-    font-size: 2rem;
 }
