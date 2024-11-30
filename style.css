@@ -2,24 +2,18 @@
 .navbar {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-between;
     padding: 1rem 2rem;
     background-color: #4c4747b4;
     color: #fff;
     position: sticky;
-}
-
-.navbar-logo {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
+    text-align: center;
 }
 
 .star {
     height: 40px;
     width: 40px;
     color:#fff153;
-    padding: 5px;
 }
 
 .navbar-link {
@@ -34,8 +28,10 @@
 }
 
 .navbar-link a.active {
-    color: #ffa353;
+    color: #ff7853;
 }
+
+/*Main Content*/
 
 .slide-text {
     position: absolute;
@@ -83,8 +79,8 @@
     transition: background-color 0.5s;
 }
 
-.image-header {
-    height: 50%;
-    width: 50%;
+.img-header {
+    height: auto;
+    max-width: 100%;
 }
 
