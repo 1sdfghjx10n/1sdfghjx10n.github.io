@@ -37,5 +37,68 @@
 }
 
 /*Main Content*/
+main {
+    background: url('images/space.jpg') center no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: -2;
+}
 
+.sun {
+    width: 10rem;
+    height: 10rem;
+    background: url('images/sun.jpg');
+    position: relative;
+    animation: rotate 10s linear infinite;
+}
+
+.planet1 {
+    background: url('images/mimas.jpg');
+    box-shadow: inset -1.5rem -1.5rem 1.5rem #000, -0.2rem -0.2rem 0.2rem #ccc;
+    width: 6rem;
+    height: 6rem;
+    position: absolute;
+    left: -8rem;
+    top: 50%;
+    transform: translateY(-50%);
+    animation: rotate 5s linear infinite,
+    orbit 10s infinite ease-in-out;
+}
+
+.sun, .planet1 {
+    border-radius: 50%;
+    background-repeat: repeat;
+    background-size: 200% 100%;
+}
+
+@keyframes rotate {
+    to {
+        background-position: -200% 0;
+    }
+}
+
+@keyframes orbit {
+    0% {
+        left: -8rem;
+        z-index: 1;
+    }
+    48% { 
+        z-index: 1;
+    }
+    50% { 
+        left: 14rem;
+        z-index: -1;
+    }
+    99% {
+        z-index: -1;
+    }
+    100% {
+        left: -8rem;
+        z-index: 1;
+    }
+}
 
