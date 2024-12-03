@@ -1,3 +1,9 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 /*Navigation bar*/
 .navbar {
     display: flex;
@@ -40,17 +46,35 @@
     position: relative;
 }
 
-.space-bg {
-    height: auto;
-    max-width: 80%;
-    animation-name: spin;
-    animation-duration: 5000ms;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
+body {
+    margin: 0px;
+    padding: 0px;
+    
+    
 }
 
-@keyframes spin {
-    from {transform: rotate(0deg);}
-    to {transform: rotate(360deg);}
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(images/space.jpg);
+    background-size: 100%;
 }
+
+.sun {
+    height: 200px;
+    width: 200px;
+    background-image: url(images/space.jpg);
+    border-radius: 50%;
+    background-size: cover;
+    box-shadow: -4px 2px 56px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
 
