@@ -37,44 +37,5 @@
 }
 
 /*Main Content*/
-.img-header {
-    min-height: 80vh;
-    width: 100%;
-    background-image: linear-gradient(rgba(4,9,28,0), rgb(140, 162, 247)), url(images/milky.jpg);
-    background-position: center;
-    background-size: cover;
-    position: relative;
-}
-
-body {
-    margin: 0px;
-    padding: 0px;
-    
-    
-}
-
-.container {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url(images/space.jpg);
-    background-size: 100%;
-}
-
-.sun {
-    height: 200px;
-    width: 200px;
-    background-image: url(images/space.jpg);
-    border-radius: 50%;
-    background-size: cover;
-    box-shadow: -4px 2px 56px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-}
-
 
 
