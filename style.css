@@ -53,23 +53,37 @@ main {
     height: 10rem;
     background: url('images/sun.jpg');
     position: relative;
-    animation: rotate 10s linear infinite;
+    animation: rotate 15s linear infinite;
 }
 
-.planet1 {
+.planet-about {
+    background: url('images/venus.jpg');
+    width: 5rem;
+    height: 5rem;
+    position: absolute;
+    left: -15rem;
+    top: 150px;
+    transform: translateY(-50%);
+    animation: rotate 8s linear infinite,
+    orbit1 15s infinite ease-in-out,
+    shadow1 15s infinite ease-in-out;
+}
+
+.planet-project {
     background: url('images/mimas.jpg');
-    box-shadow: inset -1.5rem -1.5rem 1.5rem #000, -0.2rem -0.2rem 0.2rem #ccc;
+    box-shadow: inset -1.5rem -1.5rem 1.5rem #000, -0.2rem -0.2rem 0.5rem #ccc;
     width: 6rem;
     height: 6rem;
     position: absolute;
     left: -8rem;
-    top: 50%;
+    top: 40%;
     transform: translateY(-50%);
-    animation: rotate 5s linear infinite,
-    orbit 10s infinite ease-in-out;
+    animation: rotate 10s linear infinite,
+    orbit2 10s infinite ease-in-out,
+    shadow1 10s infinite ease-in-out;
 }
 
-.sun, .planet1 {
+.sun, .planet-project, .planet-about {
     border-radius: 50%;
     background-repeat: repeat;
     background-size: 200% 100%;
@@ -81,11 +95,24 @@ main {
     }
 }
 
-@keyframes orbit {
-    0% {
-        left: -8rem;
+@keyframes orbit1 {
+    48% { 
         z-index: 1;
     }
+    50% { 
+        left: 20rem;
+        z-index: -1;
+    }
+    99% {
+        z-index: -1;
+    }
+    100% {
+        left: -15rem;
+        z-index: 1;
+    }
+}
+
+@keyframes orbit2 {
     48% { 
         z-index: 1;
     }
@@ -102,3 +129,36 @@ main {
     }
 }
 
+@keyframes shadow1 {
+    0% {
+        box-shadow: inset 1rem 0rem 1rem 0.5rem #000;
+    }
+    25% {
+        box-shadow: inset 0rem 0rem 2rem 1rem #000;
+    }
+    48% {
+        box-shadow: inset -1rem 0rem 1rem 0.5rem #000;
+    }
+
+    100% {
+        box-shadow: inset 1rem 0rem 1rem 0.5rem #000;
+    }
+    
+}
+
+@keyframes shadow2 {
+    0% {
+        box-shadow: inset 1rem -1rem 1rem 0.5rem #000;
+    }
+    25% {
+        box-shadow: inset 1rem -1rem 2rem 1rem #000;
+    }
+    48% {
+        box-shadow: inset -1rem 0rem 1rem 0.5rem #000;
+    }
+
+    100% {
+        box-shadow: inset 1rem -1rem 1rem 0.5rem #000;
+    }
+    
+}
