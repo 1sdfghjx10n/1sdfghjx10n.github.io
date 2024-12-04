@@ -1,8 +1,3 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
 /*Navigation bar*/
 .navbar {
@@ -54,6 +49,7 @@ main {
     background: url('images/sun.jpg');
     position: relative;
     animation: rotate 15s linear infinite;
+    pointer-events: none;
 }
 
 .planet-about {
@@ -64,9 +60,11 @@ main {
     left: -15rem;
     top: 150px;
     transform: translateY(-50%);
+    z-index: 1;
     animation: rotate 8s linear infinite,
     orbit1 15s infinite ease-in-out,
     shadow1 15s infinite ease-in-out;
+    pointer-events: auto;
 }
 
 .planet-project {
@@ -78,20 +76,22 @@ main {
     left: -8rem;
     top: 40%;
     transform: translateY(-50%);
-    animation: rotate 10s linear infinite,
+    z-index: 1;
+    animation: rotate 8s linear infinite,
     orbit2 8s infinite ease-in-out,
     shadow2 8s infinite ease-in-out;
 }
 
-.sun, .planet-project, .planet-about {
+.sun, .planet-about, .planet-project {
     border-radius: 50%;
     background-repeat: repeat;
     background-size: 200% 100%;
-    cursor: pointer;
     transition: transform 0.2s ease;
+    animation-play-state: running;
 }
 
-.sun:hover, .planet-project:hover, .planet-about:hover {
+.sun:hover, .planet-about:hover, .planet-project:hover {
+    cursor: pointer;
     animation-play-state: paused;
     transform: scale(1.1);
 }
