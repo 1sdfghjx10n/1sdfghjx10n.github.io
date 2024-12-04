@@ -33,73 +33,94 @@
 
 /*Main Content*/
 main {
-    background: url('images/stars.jpg') center no-repeat;
-    background-size: cover;
-    min-height: 100vh;
+    margin: 0;
+    height: 100vh;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    background: url('images/stars.jpg');
+}
+
+.space-container {
+    font-size: 6px;
+    width: 40em;
+    height: 40em;
     position: relative;
-    z-index: -2;
+}
+
+img {
+    width: 130%;
+    height: 130%;
 }
 
 .sun {
-    width: 10rem;
-    height: 10rem;
-    background: url('images/sun.jpg');
-    position: relative;
-    animation: rotate linear infinite;
-    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 15em;
+    left: 15em;
+    width: 10em;
+    height: 10em;
+    border-radius: 50%;
+    box-shadow: 0 0 3em rgb(255, 128, 0);
+    animation: orbit 50s linear infinite;
 }
 
-.orbit {
+.about, .projects {
     position: absolute;
-    border: 1px dashed rgba(255, 255, 255, 0.3);
-    border-radius: 50%;
-    animation: rotate infinite linear;
-  }
+    border-style: solid;
 
-.planet-about {
+    border-color: white;
+    border-width: 0.1em;
+    border-radius: 50%;
+}
+
+.about {
+    top: 10.5em;
+    left: 9.5em;
+    width: 20em;
+    height: 20em;
+    animation: orbit 68.7s linear infinite;
+}
+
+.projects {
+    top: 0em;
+    left: 0em;
+    width: 40em;
+    height: 40em;
+    animation: orbit 48.7s linear infinite;
+}
+
+.about::before, .projects::before {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    animation: orbit 40s linear infinite;
+}
+
+.about::before {
+    top: 1.5em;
+    right: 0.8em;
+    width: 5em;
+    height: 5em;
+    background-image: url('images/saturn.jpg');
+    background-size: cover;
+}
+
+.projects::before {
+    top: 2em;
+    right: 2em;
+    width: 8em;
+    height: 8em;
     background: url('images/venus.jpg');
-    width: 4rem;
-    height: 4rem;
-    position: absolute;
-    left: -15rem;
-    top: 130px;
-    transform: translate(50%, 50%);
-    animation: rotate infinite linear,
-    planet-spin infinite linear;
-  }
-
-.planet-project {
-    background: url('images/mimas.jpg');
-    width: 6rem;
-    height: 6rem;
-    position: absolute;
-    left: -8rem;
-    top: 50px;
-    transform: translate(50%, 50%);
-    animation: rotate infinite linear,
-    planet-spin infinite linear;
+    background-size: cover;
 }
 
-.sun, .planet-about, .planet-project {
-    border-radius: 50%;
-    background-repeat: repeat;
-    background-size: 200% 100%;
-}
-
-@keyframes rotate {
-    100% {
-      transform: rotate(360deg);
+@keyframes orbit {
+    to{
+        transform: rotate(360deg);
     }
 }
 
-@keyframes planet-spin {
-    0% {
-      transform: rotate(0deg) translateX(50px);
-    }
-    100% {
-      transform: rotate(360deg) translateX(50px);
-    }
-}
+
