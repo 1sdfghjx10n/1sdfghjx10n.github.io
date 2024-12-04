@@ -48,74 +48,58 @@ main {
     height: 10rem;
     background: url('images/sun.jpg');
     position: relative;
-    animation: rotate 15s linear infinite;
+    animation: rotate linear infinite;
     pointer-events: none;
 }
 
+.orbit {
+    position: absolute;
+    border: 1px dashed rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    animation: rotate infinite linear;
+  }
+
 .planet-about {
     background: url('images/venus.jpg');
-    width: 5rem;
-    height: 5rem;
+    width: 4rem;
+    height: 4rem;
     position: absolute;
     left: -15rem;
-    top: 150px;
-    transform: translateY(-50%);
-    z-index: 1;
-    animation: rotate 8s linear infinite,
-    orbit1 15s infinite ease-in-out,
-    shadow1 15s infinite ease-in-out;
-    pointer-events: auto;
-}
+    top: 130px;
+    transform: translate(50%, 50%);
+    animation: rotate infinite linear,
+    planet-spin infinite linear;
+  }
 
 .planet-project {
     background: url('images/mimas.jpg');
-    box-shadow: inset -1.5rem -1.5rem 1.5rem #000, -0.2rem -0.2rem 0.5rem #ccc;
     width: 6rem;
     height: 6rem;
     position: absolute;
     left: -8rem;
-    top: 40%;
-    transform: translateY(-50%);
-    z-index: 1;
-    animation: rotate 8s linear infinite,
-    orbit2 8s infinite ease-in-out,
-    shadow2 8s infinite ease-in-out;
+    top: 50px;
+    transform: translate(50%, 50%);
+    animation: rotate infinite linear,
+    planet-spin infinite linear;
 }
 
 .sun, .planet-about, .planet-project {
     border-radius: 50%;
     background-repeat: repeat;
     background-size: 200% 100%;
-    transition: transform 0.2s ease;
-    animation-play-state: running;
-}
-
-.sun:hover, .planet-about:hover, .planet-project:hover {
-    cursor: pointer;
-    animation-play-state: paused;
-    transform: scale(1.1);
 }
 
 @keyframes rotate {
     100% {
-        left: -15rem;
-        z-index: 1;
+      transform: rotate(360deg);
     }
 }
 
-@keyframes orbit2 {
-    48% { 
-        z-index: 1;
-    }
-    50% { 
-        left: 14rem;
-        z-index: -1;
-    }
-    99% {
-        z-index: -1;
+@keyframes planet-spin {
+    0% {
+      transform: rotate(0deg) translateX(50px);
     }
     100% {
-        left: -8rem;
-        z-index: 1;
+      transform: rotate(360deg) translateX(50px);
     }
 }
