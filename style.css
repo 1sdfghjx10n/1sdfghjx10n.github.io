@@ -51,6 +51,7 @@ main {
 img {
     width: 130%;
     height: 130%;
+    border-radius: 50%;
 }
 
 .sun {
@@ -60,36 +61,35 @@ img {
     position: absolute;
     top: 15em;
     left: 15em;
-    width: 10em;
-    height: 10em;
+    width: 20em;
+    height: 20em;
     border-radius: 50%;
     box-shadow: 0 0 3em rgb(255, 128, 0);
-    animation: orbit 50s linear infinite;
+    animation: orbit 40s linear infinite;
 }
 
 .about, .projects {
     position: absolute;
-    border-style: solid;
-
+    border-style: dotted;
     border-color: white;
-    border-width: 0.1em;
+    border-width: 0.5em;
     border-radius: 50%;
 }
 
 .about {
     top: 10.5em;
     left: 9.5em;
-    width: 20em;
-    height: 20em;
-    animation: orbit 68.7s linear infinite;
+    width: 30em;
+    height: 30em;
+    animation: orbit 60s linear infinite;
 }
 
 .projects {
     top: 0em;
     left: 0em;
-    width: 40em;
-    height: 40em;
-    animation: orbit 48.7s linear infinite;
+    width: 50em;
+    height: 50em;
+    animation: orbit 40s linear infinite;
 }
 
 .about::before, .projects::before {
@@ -100,21 +100,27 @@ img {
 }
 
 .about::before {
-    top: 1.5em;
-    right: 0.8em;
+    top: 0.5em;
+    right: 3em;
     width: 5em;
     height: 5em;
     background-image: url('images/saturn.jpg');
     background-size: cover;
+    pointer-events: auto;
 }
 
 .projects::before {
-    top: 2em;
+    top: 4em;
     right: 2em;
     width: 8em;
     height: 8em;
     background: url('images/venus.jpg');
     background-size: cover;
+    pointer-events: auto;
+}
+
+.about::after {
+    content: attr(data-info-abt);
 }
 
 @keyframes orbit {
