@@ -32,6 +32,12 @@
 }
 
 /*Main Content*/
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background: #000;
+}
 main {
     background: url('images/stars.jpg') center no-repeat;
     background-size: cover;
