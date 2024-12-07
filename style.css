@@ -156,6 +156,69 @@ main {
     }
 }
 
+@media screen and (max-width: 768px) {
+    .space-container {
+        width: 35em;
+        height: 35em;
+    }
+    .sun {
+        top: 5em;
+        left: 5em;
+        width: 25em;
+        height: 25em;
+        animation: orbit 20s linear infinite;
+    }
+    .about {
+        top: 0em;
+        left: 0em;
+        width: 35em;
+        height: 35em;
+        animation: orbit 30s linear infinite;
+    }
+    .projects {
+        top: -2em;
+        left: -2em;
+        width: 40em;
+        height: 40em;
+        animation: orbit 40s linear infinite;
+    }
+    .other {
+        top: -13em;
+        left: -13em;
+        width: 60em;
+        height: 60em;
+        animation: orbit 50s linear infinite;
+    }
+    .resume {
+        top: -18em;
+        left: -18em;
+        width: 70em;
+        height: 70em;
+        animation: orbit 70s linear infinite;
+    }
+
+    .abt-img {
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        animation: orbit 15s linear infinite;
+    }
+    
+    .proj-img {
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        animation: orbit 15s linear infinite;
+    }
+    
+    .other-img {
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        animation: orbit 15s linear infinite;
+    }
+}
+
 /*About Section*/
 
 .abt-me-container {
@@ -256,18 +319,23 @@ main {
 @keyframes write {
     0%, 20% {
         content: 'Student.';
+        color:darkseagreen;
     }
     21%, 40% {
         content: 'Programmer.';
+        color:darkseagreen;
     }
     41%, 60% {
         content: 'Rising Developer.';
+        color: darkseagreen;
     }
     61%, 80% {
         content: 'Digital Forensics Enthusiast.';
+        color: darkseagreen;
     }
     81%, 100% {
         content: 'Future Innovator.';
+        color: darkseagreen;
     }
 
 }
