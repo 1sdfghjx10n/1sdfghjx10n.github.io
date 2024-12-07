@@ -75,7 +75,7 @@ main {
     height: 20em;
     border-radius: 50%;
     box-shadow: 0 0 3em rgb(255, 128, 0);
-    animation: orbit 40s linear infinite;
+    animation: orbit 30s linear infinite;
     
 }
 
@@ -88,10 +88,10 @@ main {
 }
 
 .about {
-    top: 10.5em;
-    left: 9.5em;
-    width: 30em;
-    height: 30em;
+    top: 7.5em;
+    left: 7.5em;
+    width: 35em;
+    height: 35em;
     animation: orbit 30s linear infinite;
 }
 
@@ -120,7 +120,7 @@ main {
 
 .about::before {
     top: 0.5em;
-    right: 3em;
+    right: 25em;
     width: 5em;
     height: 5em;
     background-image: url('images/saturn.jpg');
