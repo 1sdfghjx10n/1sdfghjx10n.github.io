@@ -79,11 +79,10 @@ main {
     
 }
 
-.about, .projects, .resume {
+.about, .projects, .resume, .other {
     position: absolute;
     border-style: dotted;
     border-color: white;
-    border-width: 0.5em;
     border-radius: 50%;
 }
 
@@ -93,6 +92,7 @@ main {
     width: 35em;
     height: 35em;
     animation: orbit 30s linear infinite;
+    z-index: 4;
 }
 
 .projects {
@@ -101,55 +101,53 @@ main {
     width: 50em;
     height: 50em;
     animation: orbit 50s linear infinite;
+    z-index: 3;
 }
 
-.resume {
+.other {
     top: -10em;
     left: -10em;
     width: 70em;
     height: 70em;
     animation: orbit 60s linear infinite;
+    z-index: 2;
 }
 
-.about::before, .projects::before, .resume::before {
-    content: '';
-    position: absolute;
+.resume {
+    top: -20em;
+    left: -20em;
+    width: 90em;
+    height: 90em;
+    animation: orbit 90s linear infinite;
+    z-index: 1;
+}
+
+.pdf-img {
+    height: 4em;
+    width: 4em;
     border-radius: 50%;
-    animation: orbit 40s linear infinite;
+    animation: orbit 15s linear infinite;
 }
 
-.about::before {
-    top: 0.5em;
-    right: 25em;
-    width: 5em;
-    height: 5em;
-    background-image: url('images/saturn.jpg');
-    background-size: cover;
-    pointer-events: auto;
+.abt-img {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    animation: orbit 15s linear infinite;
 }
 
-.projects::before {
-    top: 4em;
-    right: 2em;
-    width: 8em;
-    height: 8em;
-    background: url('images/venus.jpg');
-    background-size: cover;
-    pointer-events: auto;
+.proj-img {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    animation: orbit 15s linear infinite;
 }
 
-.resume::before {
-    top: 48em;
-    right: 0em;
-    width: 15em;
-    height: 15em;
-    background: url('images/purple.png');
-    background-size: cover;
-    pointer-events: auto;
-}
-
-.about::after {
-    content: attr(data-info-abt);
+.other-img {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    animation: orbit 15s linear infinite;
 }
 
 @keyframes orbit {
@@ -308,9 +306,3 @@ main {
     animation: orbit 15s linear infinite;
 }
 
-.pdf-img {
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-    animation: orbit 15s linear infinite;
-}
