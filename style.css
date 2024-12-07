@@ -53,7 +53,7 @@ main {
     background-color: url('images/stars.jpg');
 }
 
-img {
+.sun-img {
     width: 130%;
     height: 130%;
     border-radius: 50%;
@@ -71,6 +71,7 @@ img {
     border-radius: 50%;
     box-shadow: 0 0 3em rgb(255, 128, 0);
     animation: orbit 40s linear infinite;
+    
 }
 
 .about, .projects {
