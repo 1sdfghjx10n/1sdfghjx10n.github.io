@@ -307,3 +307,10 @@ main {
     border-radius: 50%;
     animation: orbit 15s linear infinite;
 }
+
+.pdf-img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    animation: orbit 15s linear infinite;
+}
