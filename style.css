@@ -139,7 +139,19 @@ img {
 .abt-me-container {
     display: inline-block;
     color: #fff;
-    font-family: monospace;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.abt-me-container li {
+    font-size: 0.9em;
+    margin: 0;
+    font: monaco;
+    list-style: circle;
+}
+
+.abt-me-container ol {
+    font-size: 1.2em;
+    margin: 0;
 }
 
 .intro {
