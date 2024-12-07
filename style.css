@@ -1,3 +1,8 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 /*Navigation bar*/
 .navbar {
@@ -148,6 +153,7 @@ main {
     margin: 0;
     font: monaco;
     list-style: circle;
+    margin-left: 2em;
 }
 
 .abt-me-container ol {
@@ -275,4 +281,9 @@ main {
     5%, 20%, 25%, 40%, 45%, 60%, 65%, 80%, 85% {
         width: calc(100% + 8px);
     }
+}
+
+.pfp-img {
+    height: 150px;
+    width: 150px;
 }
