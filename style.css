@@ -79,7 +79,7 @@ main {
     
 }
 
-.about, .projects {
+.about, .projects, .resume {
     position: absolute;
     border-style: dotted;
     border-color: white;
@@ -92,7 +92,7 @@ main {
     left: 9.5em;
     width: 30em;
     height: 30em;
-    animation: orbit 60s linear infinite;
+    animation: orbit 30s linear infinite;
 }
 
 .projects {
@@ -100,10 +100,18 @@ main {
     left: 0em;
     width: 50em;
     height: 50em;
-    animation: orbit 40s linear infinite;
+    animation: orbit 50s linear infinite;
 }
 
-.about::before, .projects::before {
+.resume {
+    top: -10em;
+    left: -10em;
+    width: 70em;
+    height: 70em;
+    animation: orbit 60s linear infinite;
+}
+
+.about::before, .projects::before, .resume::before {
     content: '';
     position: absolute;
     border-radius: 50%;
@@ -126,6 +134,16 @@ main {
     width: 8em;
     height: 8em;
     background: url('images/venus.jpg');
+    background-size: cover;
+    pointer-events: auto;
+}
+
+.resume::before {
+    top: 48em;
+    right: 0em;
+    width: 15em;
+    height: 15em;
+    background: url('images/purple.png');
     background-size: cover;
     pointer-events: auto;
 }
@@ -284,6 +302,8 @@ main {
 }
 
 .pfp-img {
-    height: 150px;
-    width: 150px;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    animation: orbit 15s linear infinite;
 }
