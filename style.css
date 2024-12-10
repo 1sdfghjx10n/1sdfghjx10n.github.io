@@ -4,6 +4,14 @@
     box-sizing: border-box;
 }
 
+body {
+    margin: 0;
+    padding: 0;
+    background: url('images/stars.jpg');
+    color: white;
+}
+
+
 /*Navigation bar*/
 .navbar {
     display: flex;
@@ -14,6 +22,7 @@
     color: #fff;
     position: sticky;
     text-align: center;
+    top: 0;
 }
 
 .star {
@@ -37,11 +46,7 @@
 }
 
 /*Main Content*/
-body {
-    margin: 0;
-    padding: 0;
-    background: url('images/stars.jpg');
-}
+
 main {
     margin: 0;
     height: 100vh;
@@ -51,11 +56,11 @@ main {
 }
 
 .space-container {
-    font-size: 6px;
+    font-size: 8px;
     width: 40em;
     height: 40em;
     position: relative;
-    background-color: url('images/stars.jpg');
+    background-image: url('images/stars.jpg');
 }
 
 .sun-img {
@@ -74,7 +79,7 @@ main {
     width: 20em;
     height: 20em;
     border-radius: 50%;
-    box-shadow: 0 0 3em rgb(255, 128, 0);
+    box-shadow: 0 0 3em 0.5em rgb(255, 128, 0);
     animation: orbit 30s linear infinite;
     
 }
@@ -225,23 +230,25 @@ main {
     display: inline-block;
     color: #fff;
     font-family: 'Courier New', Courier, monospace;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
+    margin: 0 auto;
+    height: 100vh;
+    width: 100%;
+    padding: 2em;
 }
 
 .abt-me-container li {
     font-size: 0.9em;
-    margin: 0;
-    font: monaco;
+    margin: 0.5em;
+    font: 'Monaco', monospace;
     list-style: circle;
-    margin-left: 2em;
-}
-
-.abt-me-container ol {
-    font-size: 1.2em;
-    margin: 0;
+    margin-left: 2em;    
 }
 
 .intro {
-    margin: 0;
+    margin: 0.5em 0;
     display: inline-block;
     place-content: center;
     text-align: center;
@@ -374,3 +381,41 @@ main {
     animation: orbit 15s linear infinite;
 }
 
+.container {
+    background-color: #4c4747b4;
+    color: white;
+    border-radius: 10px;
+    padding: 0.5em;
+    margin: 1em;
+}
+
+/*Footer*/
+
+.footer-container {
+    background-color: #4c4747b4;
+    padding: 1.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#footer-logo {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 0.7em;
+}
+
+.footer-links {
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-links-wrapper {
+    display: flex;
+}
