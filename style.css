@@ -61,6 +61,7 @@ main {
     height: 40em;
     position: relative;
     background-image: url('images/stars.jpg');
+    padding: 0.5em;
 }
 
 .sun-img {
