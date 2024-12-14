@@ -111,10 +111,10 @@ main {
 }
 
 .other {
-    top: -10em;
-    left: -10em;
-    width: 70em;
-    height: 70em;
+    top: -5em;
+    left: -5em;
+    width: 60em;
+    height: 60em;
     animation: orbit 60s linear infinite;
     z-index: 2;
 }
