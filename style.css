@@ -88,6 +88,9 @@ main {
 .about, .projects, .resume, .other, .contact {
     position: absolute;
     border-radius: 50%;
+    border-color: #fff;
+    border-width: 1px;
+    border-style: dotted;
 }
 
 .about {
@@ -96,6 +99,15 @@ main {
     width: 35em;
     height: 35em;
     animation: orbit 30s linear infinite;
+    z-index: 5;
+}
+
+.contact {
+    top: 6em;
+    left: 6em;
+    width: 40em;
+    height: 40em;
+    animation: orbit 70s linear infinite;
     z-index: 4;
 }
 
@@ -115,15 +127,6 @@ main {
     height: 60em;
     animation: orbit 60s linear infinite;
     z-index: 2;
-}
-
-.contact {
-    top: -10em;
-    left: -10em;
-    width: 70em;
-    height: 70em;
-    animation: orbit 70s linear infinite;
-    z-index: 1;
 }
 
 .resume {
