@@ -260,9 +260,38 @@ main {
 .abt-me-container li {
     font-size: 0.9em;
     margin: 0.5em;
-    font: 'Monaco', monospace;
+    font-family: 'Monaco', monospace;
     list-style: circle;
     margin-left: 2em;    
+}
+
+button {
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: #333;
+    cursor: pointer;
+    transition: border-color 0.25s;
+}
+
+button:hover {
+    background-color: #646cff;
+}
+
+button:focus, button:focus-visible {
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+}
+
+button::after {
+    content: "";
+    display: inline-block;
+    margin-left: 0.3em;
+    transform: translateY(0.1em);
+    font-weight: bold;
 }
 
 .intro {
